@@ -24,16 +24,21 @@ import { useRAF } from 'raf-hook';
 
 ```jsx
 import React from 'react';
+import { useRAF } from 'raf-hook';
 
 export function MyRenderComponent({ active, fps }) {
   const id = useRAF(
-    () => {
+    (ts) => {
       /*
-        Runs at `fps` frames per second when `active` == true
+        Runs at `fps` frames per second when `active` == true.
+
+        ts is the frame timestamp from requestAnimationFrame
       */
     },
     active,
     fps
   );
+
+  return <></>;
 }
 ```
