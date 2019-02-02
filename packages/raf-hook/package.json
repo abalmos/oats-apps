@@ -14,10 +14,15 @@
     "build": "yarn run build:lib && yarn run build:es",
     "build:lib": "tsc --outDir dist/lib --module commonjs",
     "build:es": "tsc --outDir dist/es --module es2015",
-    "build:watch": "tsc -w"
+    "build:watch": "tsc -w",
+    "clean": "rimraf dist",
+    "prebuild": "yarn run clean"
   },
   "dependencies": {},
   "peerDependencies": {
     "react": "^16.8.0"
+  },
+  "devDependencies": {
+    "rimraf": "^2.6.3"
   }
 }
