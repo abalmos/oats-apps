@@ -27,7 +27,7 @@ import React from 'react';
 import { useRAF } from 'raf-hook';
 
 export function MyRenderComponent({ active, fps }) {
-  const id = useRAF(
+  const reqId = useRAF(
     (ts) => {
       /*
         Runs at `fps` frames per second when `active` == true.
@@ -39,6 +39,13 @@ export function MyRenderComponent({ active, fps }) {
     fps
   );
 
-  return <></>;
+  return (
+    <div>
+      The request id is <strong>{reqId}</strong>. It may be used with
+      <code>window.cancelAnimationFrame</code> to cancel the request. This shouldn't
+      be needed. The hook properly manages the requests based on the component's
+      life cycle.
+    </div>
+  );
 }
 ```
