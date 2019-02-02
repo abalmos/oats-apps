@@ -1,30 +1,28 @@
-import { useEffect } from 'react';
+import { useLayoutEffect } from 'react';
 
-export function useRAF(render: (ts: DOMHighResTimeStamp) => void, fps = 60) {
+type Render = (ts: DOMHighResTimeStamp) => void;
+
+export function useRAF(render: Render, active = true, fps = 60) {
   const interval = 1000 / fps;
   let id = 0;
   let then = 0;
 
-  useEffect(() => {
-    function loop(now: DOMHighResTimeStamp) {
-      const delta = now - then;
+  useLayoutEffect(() => {
+    if (active) {
+      id = window.requestAnimationFrame((now) => {
+        const delta = now - then;
 
-      if (delta > interval) {
-        then = now - (delta % interval);
-        render(now);
-      }
-
-      id = window.requestAnimationFrame(loop);
+        if (delta > interval) {
+          then = now - (delta % interval);
+          render(now);
+        }
+      });
     }
-
-    id = window.requestAnimationFrame(loop);
 
     return () => {
       window.cancelAnimationFrame(id);
     };
-  }, []);
+  }, [render, active]);
 
-  return () => {
-    window.cancelAnimationFrame(id);
-  };
+  return id;
 }
