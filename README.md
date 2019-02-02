@@ -1,4 +1,4 @@
-# A monorepo managed by lerna for ECEIL tools
+# A monorepo for @abalmos OATS' group apps
 
 ## Folder structure
 
@@ -8,7 +8,7 @@ access each other _before_ release. The only exception to this is the initial
 install (see "Install from scratch").
 
 - `packages/*`: Used for things that should (_could_) be released as an NPM
-                module
+  module
 - `applications/*`: Used for things that "run" as is and will be "hosted" by us
 
 ## Install from scratch
