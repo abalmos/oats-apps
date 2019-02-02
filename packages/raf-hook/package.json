@@ -1,0 +1,21 @@
+{
+  "name": "@eceil/raf-hook",
+  "version": "0.1.0",
+  "description": "A react hook for requestAnimationFrame()",
+  "browser": "dist/useRAF.ts",
+  "repository": "http://github.com/eceil/tools",
+  "author": "Andrew Balmos <abalmos@purdue.edu>",
+  "license": "MIT",
+  "main": "dist/useRAF.js",
+  "module": "dist/useRAF.js",
+  "types": "dist/useRAF.d.ts",
+  "private": false,
+  "scripts": {
+    "build": "tsc",
+    "build:watch": "tsc -w"
+  },
+  "dependencies": {},
+  "peerDependencies": {
+    "react": "next"
+  }
+}
