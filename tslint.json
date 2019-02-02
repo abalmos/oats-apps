@@ -1,0 +1,28 @@
+{
+  "rulesDirectory": ["tslint-plugin-prettier"],
+  "rules": {
+    "prettier": [true, { "singleQuote": true, "arrowParens": "always" }],
+    "quotemark": [
+      true,
+      "single",
+      "avoid-escape",
+      "avoid-template",
+      "jsx-double"
+    ],
+    "no-console": false,
+    "interface-over-type-literal": false,
+    "object-literal-sort-keys": false,
+    "jsx-no-lambda": false,
+    "ordered-imports": [
+      true,
+      {
+        "import-sources-order": "any",
+        "named-imports-order": "any"
+      }
+    ],
+    "no-submodule-imports": [true, "leaflet"],
+    "jsx-boolean-value": false,
+    "interface-name": false
+  },
+  "extends": ["tslint:latest", "tslint-react", "tslint-config-prettier"]
+}

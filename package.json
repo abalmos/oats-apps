@@ -1,0 +1,53 @@
+{
+  "name": "oats-apps",
+  "author": "Andrew Balmos <abalmos@purdue.edu>",
+  "private": true,
+  "scripts": {
+    "lerna": "lerna"
+  },
+  "workspaces": [
+    "packages/*",
+    "applications/*"
+  ],
+  "devDependencies": {
+    "@babel/core": "^7.2.2",
+    "@types/react": "^16.7.22",
+    "@types/react-dom": "^16.0.11",
+    "babel-loader": "^8.0.5",
+    "babel-polyfill": "^6.26.0",
+    "clean-webpack-plugin": "^1.0.1",
+    "css-loader": "^2.1.0",
+    "eslint": "^5.12.1",
+    "eslint-config-standard": "^12.0.0",
+    "eslint-config-standard-jsx": "^6.0.2",
+    "eslint-plugin-import": "^2.16.0",
+    "eslint-plugin-node": "^8.0.1",
+    "eslint-plugin-promise": "^4.0.1",
+    "eslint-plugin-react": "^7.12.4",
+    "eslint-plugin-react-hooks": "^0.0.0",
+    "eslint-plugin-standard": "^4.0.0",
+    "eslint-plugin-typescript": "^0.14.0",
+    "file-loader": "^3.0.1",
+    "html-webpack-plugin": "^3.2.0",
+    "lerna": "^3.10.7",
+    "nodemon": "^1.18.9",
+    "prettier": "prettier/prettier",
+    "raw-loader": "^1.0.0",
+    "style-loader": "^0.23.1",
+    "stylelint": "^9.10.1",
+    "stylelint-config-recommended": "^2.1.0",
+    "stylelint-webpack-plugin": "^0.10.5",
+    "ts-loader": "^5.3.3",
+    "ts-node": "^8.0.2",
+    "tslint": "^5.12.1",
+    "tslint-config-prettier": "^1.17.0",
+    "tslint-plugin-prettier": "^2.0.1",
+    "tslint-react": "^3.6.0",
+    "typescript": "^3.2.2",
+    "typescript-eslint-parser": "^22.0.0",
+    "url-loader": "^1.1.2",
+    "webpack": "^4.29.0",
+    "webpack-cli": "^3.2.1",
+    "webpack-dev-server": "^3.1.14"
+  }
+}
