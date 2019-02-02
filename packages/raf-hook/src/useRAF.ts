@@ -7,21 +7,25 @@ export function useRAF(render: Render, active = true, fps = 60) {
   let id = 0;
   let then = 0;
 
-  useLayoutEffect(() => {
-    if (active) {
-      id = window.requestAnimationFrame((now) => {
-        const delta = now - then;
+  const callback = (now: DOMHighResTimeStamp) => {
+    const delta = now - then;
 
-        if (delta > interval) {
-          then = now - (delta % interval);
-          render(now);
-        }
-      });
+    if (delta > interval) {
+      then = now - (delta % interval);
+      render(now);
     }
 
-    return () => {
-      window.cancelAnimationFrame(id);
-    };
+    window.requestAnimationFrame(callback);
+  };
+
+  useLayoutEffect(() => {
+    if (active) {
+      id = window.requestAnimationFrame(callback);
+
+      return () => {
+        window.cancelAnimationFrame(id);
+      };
+    }
   }, [render, active]);
 
   return id;

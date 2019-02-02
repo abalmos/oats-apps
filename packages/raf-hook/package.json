@@ -1,9 +1,9 @@
 {
-  "name": "@oats-group/raf-hook",
+  "name": "raf-hook",
   "version": "0.1.0",
   "description": "A react hook for requestAnimationFrame()",
   "browser": "dist/useRAF.ts",
-  "repository": "http://github.com/eceil/tools",
+  "repository": "http://github.com/abalmos/oats-apps",
   "author": "Andrew Balmos <abalmos@purdue.edu>",
   "license": "MIT",
   "main": "dist/lib/useRAF.js",
