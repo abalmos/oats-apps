@@ -1,6 +1,6 @@
 {
   "name": "raf-hook",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "A react hook for requestAnimationFrame()",
   "browser": "dist/useRAF.ts",
   "repository": "http://github.com/abalmos/oats-apps/tree/master/packages/raf-hook",
